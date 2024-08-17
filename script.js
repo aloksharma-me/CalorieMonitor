@@ -5,4 +5,14 @@
 // TODO: calculate net calories
 // TODO: form validation (text and number fields)
 
-console.log('diet guage');
+// Taking user inputs from fields calorie goal, breakfast calorie, lunch calorie, snacks calorie, dinner calorie, exercise calorie
+
+const submitButton = document.querySelector("#submit");
+const calorieGoal = document.querySelector("#calorieGoalValue");
+
+// submitButton.onclick = buttonClicked;
+submitButton.addEventListener("click", buttonClicked);
+
+function buttonClicked(){
+    console.log('clicked');
+}

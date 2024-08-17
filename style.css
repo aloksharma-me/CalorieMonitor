@@ -1,7 +1,6 @@
-/* Write normal CSS, then rewrite using best practices and CSS features like nesting etc */
-
 /* TODO: Rewrite with native CSS features and best practices */
 /* TODO: Rewrite with Tailwind */
+/* TODO: Refactor to change color of SVG with code */
 
 /* fonts, variables, common styles */
 :root{
@@ -11,7 +10,6 @@
 
     /* colours */
     color: #0F172A;
-
     --white: #ffffff;
     --background-muted: #F8FAFC;
     --background-subtle: #F1F5F9;
@@ -40,6 +38,8 @@
 html, body{
     background-color: var(--background-subtle);
 }
+
+/* END OF BASE STYLES */
 
 .headerContainer{
     width: auto;
@@ -203,7 +203,7 @@ label{
 }
 
 .summaryCard{
-    height: 300px;
+    height: 250px;
     background-color: var(--background-extreme);
     color: var(--text-onDark);
 }
@@ -232,6 +232,4 @@ label{
     flex-grow: 1;
     gap: 24px;
 }
-
-/* TODO: Refactor to change color of SVG with code */
 

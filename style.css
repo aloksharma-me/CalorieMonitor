@@ -7,7 +7,7 @@
 :root{
     /* type */
     font-family: "Inter", sans-serif;
-    font-size: 1rem;
+    font-size: var(--font-size-default);
 
     /* colours */
     color: #0F172A;
@@ -22,7 +22,8 @@
     --text-default: #0F172A;
     --text-onDark: #F1F5F9;    
 
-    /* space */
+    /* dimensions */
+    --font-size-default: 1rem;
     --padding-32: 32px;
     --padding-40: 40px;
     --margin-2: 2px;
@@ -41,8 +42,8 @@ html, body{
 }
 
 .headerContainer{
-    width: 100vw;
-    padding: 24px 32px 24px 32px; /* top right bottom left */
+    width: auto;
+    padding: 16px 32px 16px 32px; /* top right bottom left */
     background-color: var(--white);
 }
 
@@ -60,8 +61,10 @@ html, body{
     padding: var(--padding-40);
     margin-top: var(--margin-2);
     width: 100%;
-    height: 82.5vh;
+    height: 84.5vh;
 }
+
+/* left container element styles */
 
 .leftContainer{
     display: flex;
@@ -114,7 +117,7 @@ html, body{
 
 /* START input field styles */
 label{
-    font-size: 1rem;
+    font-size: var(--font-size-default);
     font-weight: 400;
     color: var(--text-default);
 }
@@ -123,7 +126,7 @@ label{
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-8);
     padding: 12px 14px 12px 14px;
-    font-size: 1rem;
+    font-size: var(--font-size-default);
     color: var(--text-default);
 }
 
@@ -149,13 +152,14 @@ label{
 
 #submit, #clear{
     width: 100%;
-    height: 48px;
     border: none;
     border-radius: 8px;
+    padding: 20px 0px 20px 0px;
 }
 
 #submit{
     background-color: var(--background-extreme);
+    font-size: var(--font-size-default);
     color: var(--text-onDark);
     transition: ease-in-out;
     transition-duration: 0.4s;
@@ -169,6 +173,7 @@ label{
 #clear{
     border: 1px solid var(--border-subtle);
     background-color: var(--background-muted);
+    font-size: var(--font-size-default);
     color: var(--text-default);
     transition: ease-in-out;
     transition-duration: 0.4s;
@@ -178,3 +183,55 @@ label{
     background-color: var(--background-subtle);
     cursor: pointer;
 }
+
+
+/* right container element styles */
+
+.rightContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#card{    
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;    
+    padding: 24px;
+}
+
+.summaryCard{
+    height: 300px;
+    background-color: var(--background-extreme);
+    color: var(--text-onDark);
+}
+
+.netCalorieCard{
+    flex-grow: 1;
+    background-color: var(--background-subtle);
+    color: var(--text-default);
+}
+
+.goalCard, .consumedCard, .burnedCard{
+    width: 100%;
+    flex-grow: 1; /* stretches the divs to fill the available space*/
+    background-color: var(--background-subtle);
+    color: var(--text-default);
+}
+
+.cardContentContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.resultContainer{
+    display: flex;
+    flex-grow: 1;
+    gap: 24px;
+}
+
+/* TODO: Refactor to change color of SVG with code */
+

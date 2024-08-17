@@ -13,6 +13,7 @@
     color: #0F172A;
 
     --white: #ffffff;
+    --background-muted: #F8FAFC;
     --background-subtle: #F1F5F9;
     --background-extreme: #0F172A;
     --background-intense: #334155;
@@ -167,5 +168,13 @@ label{
 
 #clear{
     border: 1px solid var(--border-subtle);
+    background-color: var(--background-muted);
+    color: var(--text-default);
+    transition: ease-in-out;
+    transition-duration: 0.4s;
+}
+
+#clear:hover{
     background-color: var(--background-subtle);
+    cursor: pointer;
 }

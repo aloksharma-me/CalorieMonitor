@@ -8,11 +8,11 @@
 // Taking user inputs from fields calorie goal, breakfast calorie, lunch calorie, snacks calorie, dinner calorie, exercise calorie
 
 const submitButton = document.querySelector("#submit");
-const calorieGoal = document.querySelector("#calorieGoalValue");
+const calorieGoal = document.querySelector("#calorieGoal").value;
 
 // submitButton.onclick = buttonClicked;
 submitButton.addEventListener("click", buttonClicked);
 
 function buttonClicked(){
-    console.log('clicked');
+    console.log(calorieGoal);
 }

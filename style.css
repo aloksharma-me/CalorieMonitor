@@ -122,7 +122,7 @@ label{
     color: var(--text-default);
 }
 
-#textInput, #calorieGoal{
+#calorieGoal, #calorieBreakfast, #calorieLunch, #calorieSnacks, #calorieDinner, #calorieExercise, #nameBreakfast, #nameLunch, #nameSnacks, #nameDinner, #nameExercise{
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-8);
     padding: 12px 14px 12px 14px;

@@ -14,30 +14,40 @@ let calorieLunch = document.querySelector("#calorieLunch");
 let calorieSnacks = document.querySelector("#calorieSnacks");
 let calorieDinner = document.querySelector("#calorieDinner");
 let calorieExercise = document.querySelector("#calorieExercise");
+let calorieNet = 0;
+let calorieConsumed = 0;
+let calorieBurned = 0;
+    
 
-// calculate button reference and event listener 
+// calculateButton reference and call to calculateNetCalories function onclick
 const calculateButton = document.querySelector("#submit");
-calculateButton.addEventListener("click", calculateCalories);
+calculateButton.addEventListener("click", calculateNetCalories);
 
-// clear button reference and reload page to clear
+// clearButton reference and reload page to clear
 const clearButton = document.querySelector("#clear");
-clearButton.addEventListener("click", reloadPage);
+clearButton.addEventListener("click", clearPage);
 
-function reloadPage(){
+
+/* FUNCTION DEFINITIONS BEGIN */
+
+// calculates calorie excess/deficit on Calculate button click
+function calculateNetCalories(){
+    getCalorieValues();
+
+    calorieConsumed = (calorieBreakfast + calorieLunch + calorieSnacks + calorieDinner);
+    calorieBurned = calorieExercise;
+    calorieNet = calorieConsumed - calorieBurned;
+
+    return console.log(calorieNet);
+}
+
+// clears all values by reloading the page
+function clearPage(){
     window.location.reload();
     return false;
 }
 
-
-/* FUNCTION DEFINITIONS START */
-
-// calculates calorie excess/deficit on Calculate button click
-function calculateCalories(){
-    getCalorieValues();
-    return console.log(calorieGoal, calorieBreakfast, calorieLunch, calorieSnacks, calorieDinner, calorieExercise);
-}
-
-// stores user entered calorie values on Calculate button click
+// captures user entered calorie values on Calculate button click
 function getCalorieValues(){
     calorieGoal = calorieGoal.value;
     calorieBreakfast  = calorieBreakfast.value;

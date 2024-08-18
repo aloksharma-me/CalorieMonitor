@@ -1,6 +1,6 @@
-// TODO: user inputs and change content based on that
+// DONE: get user inputs
 // TODO: add meals (show/hide details fields)
-// TODO: submit.onclick, clear.onclick
+// DONE: submit.onclick, clear.onclick
 // TODO: green and red (change background colour, text, icon color)
 // TODO: calculate net calories
 // TODO: form validation (text and number fields)
@@ -19,6 +19,18 @@ let calorieExercise = document.querySelector("#calorieExercise");
 const calculateButton = document.querySelector("#submit");
 calculateButton.addEventListener("click", calculateCalories);
 
+// clear button reference and reload page to clear
+const clearButton = document.querySelector("#clear");
+clearButton.addEventListener("click", reloadPage);
+
+function reloadPage(){
+    window.location.reload();
+    return false;
+}
+
+
+/* FUNCTION DEFINITIONS START */
+
 // calculates calorie excess/deficit on Calculate button click
 function calculateCalories(){
     getCalorieValues();
@@ -33,5 +45,8 @@ function getCalorieValues(){
     calorieSnacks  = calorieSnacks.value;
     calorieDinner  = calorieDinner.value;
     calorieExercise  = calorieExercise.value;
+    
     return calorieGoal, calorieBreakfast, calorieLunch, calorieSnacks, calorieDinner, calorieExercise;
 }
+
+/* FUNCTION DEFINITIONS END */

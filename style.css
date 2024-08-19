@@ -1,14 +1,13 @@
+/* TODO: Style input focus states
+/* TODO: Add shadows to input fields similar to designs */
 /* TODO: Rewrite with native CSS features and best practices */
 /* TODO: Rewrite with Tailwind */
 /* TODO: Refactor to change color of SVG with code */
 
 /* fonts, variables, common styles */
 :root{
-    /* type */
     font-family: "Inter", sans-serif;
     font-size: var(--font-size-default);
-
-    /* colours */
     color: #0F172A;
     --white: #ffffff;
     --background-muted: #F8FAFC;
@@ -19,8 +18,6 @@
     --text-placeholder: #94A3B8;
     --text-default: #0F172A;
     --text-onDark: #F1F5F9;    
-
-    /* dimensions */
     --font-size-default: 1rem;
     --padding-32: 32px;
     --padding-40: 40px;
@@ -66,7 +63,7 @@ html, body{
 
 /* left container element styles */
 
-.leftContainer{
+.leftContainer{ 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -93,7 +90,7 @@ html, body{
     background-color: var(--background-subtle);
 }
 
-.mealDetails{
+.breakfastDetails, .lunchDetails, .snacksDetails, .dinnerDetails{
     display: none;
 }
 
@@ -193,7 +190,7 @@ label{
     gap: 24px;
 }
 
-#card{    
+#card, #summaryCard{    
     width: auto;
     display: flex;
     flex-direction: column;
